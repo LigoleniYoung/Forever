@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "'Times New Roman Italic', 'Times New Roman', serif";
+            background-color: #a0c090; /* Updated background color */
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        /* Scroll container for images */
+        .scroll-container {
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+        }
+
+        .scroll-track {
+            display: flex;
+            width: 200%;
+            animation: scroll 30s linear infinite;
+        }
+
+        .scroll-track img {
+            width: auto;
+            height: 50vh;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-track img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Content at the bottom */
+        .content {
+            text-align: center;
+            margin-top: 50vh; /* Push content to the bottom */
+            position: relative;
+            z-index: 1; /* Ensure the content is above the images */
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .text-space {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: white;
+            color: #a0c090;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #c2d8b4;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Heart Animation */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2rem;
+            animation: heartAnimation 3s ease-in-out forwards;
+        }
+
+        @keyframes heartAnimation {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px) scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll container for images -->
+    <div class="scroll-container">
+        <div class="scroll-track">
+            <img src="image8.jpg" alt="Image8">
+            <img src="image9.jpg" alt="Image9">
+            <img src="image10.jpg" alt="Image10">
+            <img src="image11.jpg" alt="Image11">
+            <img src="image12.jpg" alt="Image12">
+            <img src="image13.jpg" alt="Image13">
+            <img src="image14.jpg" alt="Image14">
+            <!-- Repeat images for seamless effect -->
+            <img src="image8.jpg" alt="Image8">
+            <img src="image9.jpg" alt="Image9">
+            <img src="image10.jpg" alt="Image10">
+            <img src="image11.jpg" alt="Image11">
+            <img src="image12.jpg" alt="Image12">
+            <img src="image13.jpg" alt="Image13">
+            <img src="image14.jpg" alt="Image14">
+        </div>
+    </div>
+
+    <!-- Content at the bottom -->
+    <div class="content">
+        <h1>Goodluck</h1>
+        <p class="text-space">You're gonna do so great. even beyond the doubts and challenges. you will succeed, in the greatest way imaginable. I know it. You're the smartest woman i know, that is never afraid to speak her truth even to the scariest of faces. Your acts of activism will go on to change this world, never being forgotten. I love you, do well. For everything you believe in. </p> <!-- Leave space for your content -->
+        <button class="button" id="loveButton">Love</button>
+    </div>
+
+    <script>
+        // Function to generate hearts when the "Love" button is clicked
+        document.getElementById('loveButton').addEventListener('click', function() {
+            for (let i = 0; i < 20; i++) { // Create 20 hearts
+                const heart = document.createElement('span');
+                heart.textContent = '❤️';
+                heart.classList.add('heart');
+                // Set a random position at the bottom
+                heart.style.left = `${Math.random() * window.innerWidth}px`;
+                heart.style.bottom = '0px';  // Position hearts at the bottom
+                heart.style.animationDelay = `${Math.random() * 2}s`;
+                document.body.appendChild(heart);
+                
+                // Remove the heart element after the animation ends
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
+
+

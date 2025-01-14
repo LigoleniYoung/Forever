@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi My Love</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "'Times New Roman Italic', 'Times New Roman', serif";
+            background-color: #ff69b4; /* Set background to pink */
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .scroll-container {
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+        }
+
+        .scroll-track {
+            display: flex;
+            width: 200%;
+            animation: scroll 30s linear infinite;
+        }
+
+        .scroll-track img {
+            width: auto;
+            height: 50vh;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-track img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50vh; /* Push content below the images */
+            position: relative;
+            z-index: 1; /* Ensure the content is above the images */
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: white;
+            color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #ff85c9;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="scroll-track">
+            <img src="./image1.jpg" alt="Image 1">
+            <img src="./image2.jpg" alt="Image 2">
+            <img src="./image3.jpg" alt="Image 3">
+            <img src="./image4.jpg" alt="Image 4">
+            <img src="./image5.jpg" alt="Image 5">
+            <img src="./image6.jpg" alt="Image 6">
+            <img src="./image7.jpg" alt="Image 7">
+            <!-- Repeat images for seamless effect -->
+            <img src="./image1.jpg" alt="Image 1">
+            <img src="./image2.jpg" alt="Image 2">
+            <img src="./image3.jpg" alt="Image 3">
+            <img src="./image4.jpg" alt="Image 4">
+            <img src="./image5.jpg" alt="Image 5">
+            <img src="./image6.jpg" alt="Image 6">
+            <img src="./image7.jpg" alt="Image 7">
+        </div>
+    </div>
+    <div class="content">
+        <h1>Hi My Love</h1>
+        <a href="secondPage.html">
+            <button class="button">Click here!</button>
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

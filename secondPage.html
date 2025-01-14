@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "'Times New Roman Italic', 'Times New Roman', serif";
+            background-color: #ff69b4; /* Background color */
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scroll-container {
+            width: 100vw;
+            height: 50vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+        }
+
+        .scroll-track {
+            display: flex;
+            width: 200%;
+            animation: scroll 30s linear infinite;
+        }
+
+        .scroll-track img {
+            width: auto;
+            height: 50vh;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-track img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Content directly under the scroll container */
+        .content {
+            text-align: center;
+            margin-top: 50vh; /* Ensure text is below the scroll container */
+            padding: 20px;
+            font-size: 1rem; /* Reduced font size for text */
+            max-width: 90%; /* Added max-width to avoid text being too stretched */
+            padding-bottom: 10vh; /* Add bottom padding to create space for the continue button */
+        }
+
+        h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .text-space {
+            color: white;
+            font-size: 1rem; /* Reduced font size */
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: white;
+            color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #ff85c9;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Continue button at the bottom-right corner */
+        .continue-button {
+            position: absolute;
+            bottom: 5%; /* Positioned under the text */
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll container for images -->
+    <div class="scroll-container">
+        <div class="scroll-track">
+            <img src="image1.jpg" alt="Image1">
+            <img src="image2.jpg" alt="Image2">
+            <img src="image3.jpg" alt="Image3">
+            <img src="image4.jpg" alt="Image4">
+            <img src="image5.jpg" alt="Image5">
+            <img src="image6.jpg" alt="Image6">
+            <img src="image7.jpg" alt="Image7">
+            <!-- Repeat images for seamless effect -->
+            <img src="image1.jpg" alt="Image1">
+            <img src="image2.jpg" alt="Image2">
+            <img src="image3.jpg" alt="Image3">
+            <img src="image4.jpg" alt="Image4">
+            <img src="image5.jpg" alt="Image5">
+            <img src="image6.jpg" alt="Image6">
+            <img src="image7.jpg" alt="Image7">
+        </div>
+    </div>
+
+    <!-- Content directly below the scroll container -->
+    <div class="content">
+        <h1>Thank you</h1>
+        <p class="text-space">We had a great love, a kind love. a love I had only dreamt about until I met you. I never imagined I would witness such a great light in my life, and apparently, neither did you. In the months that we shared, I experienced forever, a love I guarantee I will never forget. I never once intended to take you for granted, if I ever acted that way. You're the most beautiful woman I have ever met. One might think I’m referring to beauty, but every time I've said that, I meant every atom of you. You taught me many great things and showed me a gentle care, as well as the people closest to me, and for that, I am forever indebted to you. I can only hope I gave you a love that means the same to you, and that one day you'd want to continue where we left off. </p>
+    </div>
+
+    <!-- Continue button at the bottom-right corner -->
+    <div class="continue-button">
+        <a href="thirdPage.html">
+            <button class="button">Continue</button>
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
