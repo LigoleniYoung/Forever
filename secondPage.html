@@ -58,7 +58,7 @@
             padding: 20px;
             font-size: 1rem; /* Reduced font size for text */
             max-width: 90%; /* Added max-width to avoid text being too stretched */
-            padding-bottom: 10vh; /* Add bottom padding to create space for the continue button */
+            padding-bottom: 40px; /* Create space for the continue button */
         }
 
         h1 {
@@ -90,11 +90,11 @@
             transform: scale(1.1);
         }
 
-        /* Continue button at the bottom-right corner */
+        /* Continue button at the bottom of the content */
         .continue-button {
-            position: absolute;
-            bottom: 5%; /* Positioned under the text */
-            right: 10%;
+            position: relative;
+            margin-top: 30px; /* Ensure button is below the text */
+            text-align: center;
         }
     </style>
 </head>
@@ -123,10 +123,10 @@
     <!-- Content directly below the scroll container -->
     <div class="content">
         <h1>Thank you</h1>
-        <p class="text-space">We had a great love, a kind love. a love I had only dreamt about until I met you. I never imagined I would witness such a great light in my life, and apparently, neither did you. In the months that we shared, I experienced forever, a love I guarantee I will never forget. I never once intended to take you for granted, if I ever acted that way. You're the most beautiful woman I have ever met. One might think I’m referring to beauty, but every time I've said that, I meant every atom of you. You taught me many great things and showed me a gentle care, as well as the people closest to me, and for that, I am forever indebted to you. I can only hope I gave you a love that means the same to you, and that one day you'd want to continue where we left off. </p>
+        <p class="text-space">We had a great love, a kind love. a love I had only dreamt about until I met you. I never imagined I would witness such a great light in my life, and apparently, neither did you. In the months that we shared, I experienced forever, a love I guarantee I will never forget. I never once intended to take you for granted, if I ever acted that way. You're the most beautiful woman I have ever met. One might think I’m referring to beauty, but every time I've said that, I meant every atom of you. You taught me many great things and showed me a gentle care, as well as the people closest to me, and for that, I am forever indebted to you. I can only hope I gave you a love that means the same to you, and that one day you'd want to continue where we left off.</p>
     </div>
 
-    <!-- Continue button at the bottom-right corner -->
+    <!-- Continue button positioned after the text -->
     <div class="continue-button">
         <a href="thirdPage.html">
             <button class="button">Continue</button>
@@ -134,6 +134,7 @@
     </div>
 </body>
 </html>
+
 
 
 
